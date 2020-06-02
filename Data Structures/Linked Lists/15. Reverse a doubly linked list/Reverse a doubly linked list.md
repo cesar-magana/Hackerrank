@@ -83,10 +83,15 @@ DoublyLinkedListNode* reverse(DoublyLinkedListNode* head) {
 
 ```c++
 DoublyLinkedListNode* reverse(DoublyLinkedListNode* head) {
+    // If head is NULL or only one node, it's reverse of itself.
     if ( head == NULL || head->next == NULL )
         return head;
+    // Reverse the sub-list leaving the head node.
     DoublyLinkedListNode* temp = reverse(head->next);
+    // head->next still points to the last element of reversed sub-list.
+    // Move the head to the end.
     head->next->next = head;
+    // Point the last node to NULL, get rid of cycles.
     head->next = NULL;
     return temp;
 }
