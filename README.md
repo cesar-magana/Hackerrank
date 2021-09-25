@@ -1,2 +1,2 @@
 # Hackerrank Solutions in C++
-My solutions to Hackerrank problems.
+My Hackerrank solutions in C++.
